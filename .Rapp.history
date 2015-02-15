@@ -1,0 +1,11 @@
+source(cacheMatrix.R)
+source("cacheMatrix.R")
+size<-1000
+mym<-matrix(rnorm(size^2),nrow=size,ncol=size)
+mymi<-solve(mym)
+ansm<-makeCacheMatric(mym)
+ansm<-makeCacheMatrix(mym)
+ansi<-cacheSolve(ansm)
+ansi<-cacheSolve(ansm)
+ansi<-cacheSolve(ansm)
+identical(mymi,ansi)
